@@ -26,10 +26,10 @@ def download_file(url:str, filename)-> None:
             unit='B',
             unit_scale=True,
             unit_divisor=1024,
-        ) as bar:
+        ) as r:
             for data in response.iter_content(chunk_size=chunk_size):
                 file.write(data)
-                bar.update(len(data))
+                r.update(len(data))
         logging.info("Downloaded %s successfully.", filename)
     else:
         logging.error("Failed to download the file.")

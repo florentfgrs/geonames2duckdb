@@ -1,13 +1,14 @@
 """DuckDB handling"""
 
-from pathlib import Path
-import time
-import duckdb
 import logging
+import time
 from itertools import cycle
+from pathlib import Path
 from shutil import get_terminal_size
 from threading import Thread
 from time import sleep
+
+import duckdb
 
 
 class Loader:
