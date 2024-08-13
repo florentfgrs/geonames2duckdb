@@ -6,9 +6,10 @@
     "source.organizeImports": "explicit",
     "source.fixAll": "explicit"
   },
-  "editor.formatOnSave": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "cSpell.enabled": false
+  "cSpell.enabled": false, 
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true
 }
