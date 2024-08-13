@@ -99,7 +99,7 @@ def execute_query_on_db(sql:str, db_path:Path, query_name, spatial:bool = False)
     loader = Loader("Execution in progress...", "Execution completed !", 0.05).start()
     try:
         with duckdb.connect(str(db_path)) as con:
-            if spatial : 
+            if spatial :
                 con.execute("INSTALL spatial ; LOAD spatial ;")
             con.execute(sql)
     except Exception as e:

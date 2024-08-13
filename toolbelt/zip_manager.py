@@ -12,9 +12,9 @@ def unzip_file(path:Path) -> None :
     :param path: Zip path
     :type path: Path
     """
-    with ZipFile(str(path), "r") as zip: 
-        try : 
-            zip.extractall(path=path.parent) 
+    with ZipFile(str(path), "r") as the_zip:
+        try :
+            the_zip.extractall(path=path.parent)
             logging.info("{str(path)}has been successfully unzipped on %s", str(path.parent))
         except Exception as e :
             logging.warning("Error during unzip %s : %s", str(path.parent), e)
